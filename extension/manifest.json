@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Degree Finder",
+  "version": "1.0.1",
+  "description": "See which second majors and minors you're closest to finishing, ranked by credits left.",
+  "icons": {
+  "16": "icons/icon16.png",
+  "32": "icons/icon32.png",
+  "48": "icons/icon48.png",
+  "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://login.stellic.virginia.edu/*"],
+      "js": ["api.js", "ranker.js", "ui.js"]
+    }
+  ]
+}
